@@ -1,0 +1,16 @@
+<B>hello world</b>
+<div>
+{{message}}
+</div>
+
+<svg ng-attr-height="{{graph.height}}" ng-attr-width="{{graph.width}}">
+	<circle ng-repeat="circle in circles" 
+			ng-attr-cx="{{circle.x}}"
+			ng-attr-cy="{{circle.y}}"
+			ng-attr-r="{{circle.r}}">
+	</circle>
+	
+	<path ng-repeat="p in paths" ng-attr-d="{{p}}" />
+</svg>
+
+<button ng-click="addpath()">Add Path</button>

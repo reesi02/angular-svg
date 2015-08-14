@@ -1,0 +1,10 @@
+{
+	"name":"chatRoom",
+	"description":"",
+	"version":"0.0.1",
+	"dependencies":{
+	"express":"*",
+	"body-parser":"*",
+	"ws":"*"
+	}
+}
