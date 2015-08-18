@@ -3,6 +3,10 @@
 {{message}}
 </div>
 
+<select ng-model="colour">
+	<option ng-repeat="c in colours" value="{{c}}">{{c}}</option>
+</select>
+
 <svg 	ng-attr-height="{{size.height}}" 
 		ng-attr-width="{{size.width}}">
 <!--
@@ -12,7 +16,7 @@
 			ng-attr-r="{{circle.r}}">
 	</circle>
 	-->
-	<path ng-repeat="p in paths" ng-attr-d="{{p}}"  stroke="red" stroke-width="3" fill="none" />
+	<path ng-repeat="p in paths" ng-attr-d="{{p}}"  ng-attr-stroke="{{colour}}" stroke-width="3" fill="none" />
 </svg>
 
 <button ng-click="addpath()">Add Path</button>
