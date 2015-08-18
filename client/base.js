@@ -3,6 +3,10 @@ var app = angular.module("svg");
 app.controller("baseCtrl",["$scope","$timeout",function($scope,$timeout){
 	$scope.message = "controller init message";
 	
+	$scope.colours=["red","yellow","green","blue"];
+	// default colours
+	$scope.colour="red";
+	
 	$scope.size = {'width':265,'height':400};
 	
 	$scope.circles =[];
