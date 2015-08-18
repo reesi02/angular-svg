@@ -16,12 +16,17 @@ app.controller("baseCtrl",["$scope","$timeout",function($scope,$timeout){
 	};
 	
 	$scope.populateGraph = function(offset){
-		$scope.graph = "M0 100 ";
+		
+		$scope.graph = "";
 		for ( i = 0 ; i < 2*Math.PI; i=i+Math.PI/16){
-			var y = Math.sin(i+offset);
+			var y = 100-(Math.sin(i+offset)*100);
 			var x = (i/(2*Math.PI))*100
 			
-			$scope.graph += "L "+x+" "+(100-(y*100)) + " ";
+			if ( x == 0 ){
+				$scope.graph="M"+x+" "+y+" ";
+			}else{
+				$scope.graph += "L"+x+" "+y + " ";
+			}
 		}
 		$scope.paths = [];
 		$scope.paths.push($scope.graph);
