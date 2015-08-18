@@ -1,7 +1,7 @@
 var app = angular.module("svg",["ngRoute"]);
 app.config(["$routeProvider",
 		function($routeProvider){
-	$routeProvider.when("/",{
+	$routeProvider.when("/sinWave",{
 		templateUrl:'base.html',
 		controller:'baseCtrl'
 	})
