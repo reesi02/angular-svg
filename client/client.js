@@ -9,6 +9,10 @@ app.config(["$routeProvider",
 		templateUrl:"other.html",
 		controller:'otherCtrl'
 	})
+	.when("/box",{
+		templateUrl:'box.html',
+		controller:'boxCtrl'
+	})
 	.otherwise({redirect:'/'});
 }]);
 
