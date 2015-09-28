@@ -9,7 +9,13 @@ app.config(["$routeProvider",
 		templateUrl:"other.html",
 		controller:'otherCtrl'
 	})
+	.when("/box",{
+		templateUrl:'box.html',
+		controller:'boxCtrl'
+	})
+	.when("/map",{
+		templateUrl:"map.html",
+		controller:'mapCtrl'
+	})
 	.otherwise({redirect:'/'});
 }]);
-
-
